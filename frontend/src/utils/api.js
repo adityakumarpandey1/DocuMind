@@ -4,9 +4,6 @@ import axios from "axios";
 const API_BASE ="https://documind-backend-4k80.onrender.com";
 const api = axios.create({
   baseURL: API_BASE,
-
-  // Required for session-based storage
-  withCredentials: true,
 });
 
 // ---------------- UPLOAD ----------------
