@@ -1,10 +1,7 @@
 import axios from "axios";
 
 // CRA uses process.env.REACT_APP_*
-const API_BASE =
-  process.env.REACT_APP_API_URL ||
-  "http://localhost:5000";
-
+const API_BASE ="https://documind-2910.onrender.com";
 const api = axios.create({
   baseURL: API_BASE,
 
