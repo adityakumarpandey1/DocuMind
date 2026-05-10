@@ -1,0 +1,76 @@
+.wrapper { width: 100%; }
+
+.dropzone {
+  border: 1.5px dashed var(--border-hover);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dropzone:hover, .active {
+  border-color: var(--accent);
+  background: var(--accent-dim);
+}
+
+.uploading {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.icon {
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--accent-dim);
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--accent-dim);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.label { font-size: 0.95rem; font-weight: 500; color: var(--text); }
+.sub { font-size: 0.78rem; color: var(--text-muted); }
+
+.uploadStatus { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: var(--surface3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.2s ease;
+}
+
+.pct { font-size: 0.75rem; color: var(--text-muted); font-family: 'DM Mono', monospace; }
+
+.error {
+  margin-top: 0.5rem;
+  color: var(--danger);
+  font-size: 0.82rem;
+  text-align: center;
+}
